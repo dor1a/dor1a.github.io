@@ -1,155 +1,102 @@
-# The Site Configuration
-
-# Import the theme
 theme: jekyll-theme-chirpy
 
-# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
-# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
-# otherwise, the layout language will use the default value of 'en'.
 lang: en
 
-# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone: Asia/Seoul
 
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-# ↓ --------------------------
+title: ForMellow
 
-title: ForMellow # the main title
+tagline: 404 Tagline not found
 
-tagline: # it will display as the subtitle
+description: >-
+  push blog --force
 
-description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
-
-# Fill in the protocol & hostname for your site.
-# E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://blog.formellow.com"
 
 github:
-  username: dor1a # change to your GitHub username
+  username: dor1a
 
-twitter:
-  username: # change to your Twitter username
+#twitter:
+#  username:
 
 social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Dor1
-  email: me@formellow.com # change to your email address
+    name: Dor1
+  email: me@formellow.com
   links:
-    # The first element serves as the copyright owner's link
-    #- https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/dor1a # change to your GitHub homepage
-    # Uncomment below to add more social links
+    #- https://twitter.com/username
+    - https://github.com/dor1a
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-# Site Verification Settings
-webmaster_verifications:
-  google: # fill in your Google verification code
-  bing: # fill in your Bing verification code
-  alexa: # fill in your Alexa verification code
-  yandex: # fill in your Yandex verification code
-  baidu: # fill in your Baidu verification code
-  facebook: # fill in your Facebook verification code
+#webmaster_verifications:
+#  google:
+#  bing:
+#  alexa:
+#  yandex:
+#  baidu:
+#  facebook:
 
-# ↑ --------------------------
-# The end of `jekyll-seo-tag` settings
-
-# Web Analytics Settings
 analytics:
-  google:
-    id: # fill in your Google Analytics ID
+#  google:
+#    id:
   goatcounter:
-    id: # fill in your GoatCounter ID
-  umami:
-    id: # fill in your Umami ID
-    domain: # fill in your Umami domain
-  matomo:
-    id: # fill in your Matomo ID
-    domain: # fill in your Matomo domain
+    id: dor1
+#  umami:
+#    id:
+#    domain:
+#  matomo:
+#    id:
+#    domain:
   cloudflare:
-    id: # fill in your Cloudflare Web Analytics token
-  fathom:
-    id: # fill in your Fathom Site ID
+    id: 7a3b493bee82447a8e6a3667e07989ff
+#  fathom:
+#    id:
 
-# Page views settings
 pageviews:
-  provider: # now only supports 'goatcounter'
+  provider: goatcounter
 
-# Prefer color scheme setting.
-#
-# Note: Keep empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark and light
-# on the bottom left of the sidebar.
-#
-# Available options:
-#
-#     light — Use the light color scheme
-#     dark — Use the dark color scheme
-#
-theme_mode: dark # [light | dark]
+theme_mode: dark
 
-# The CDN endpoint for media resources.
-# Notice that once it is assigned, the CDN url
-# will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
-#
-# e.g. 'https://cdn.com'
-cdn:
+cdn: https://pub-8aa7217da3b64b10808fc34634e806ce.r2.dev
 
-# the avatar on sidebar, support local or CORS resources
 avatar: https://web.formellow.com/identity_media/representative_512x512.png
 
-# The URL of the site-wide social preview image used in SEO `og:image` meta tag.
-# It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
+social_preview_image: https://pub-b531046cfad5486cb08321a7da210855.r2.dev/identity_media/formellow_512x136.png
 
-# boolean type, the global switch for TOC in posts.
 toc: true
 
 comments:
-  # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: # [disqus | utterances | giscus]
-  # The provider options are as follows:
-  disqus:
-    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
-  utterances:
-    repo: # <gh-username>/<repo>
-    issue_term: # < url | pathname | title | ...>
-  # Giscus options › https://giscus.app
+  provider: giscus
+#  disqus:
+#    shortname:
+#  utterances:
+#    repo:
+#    issue_term:
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
-    mapping: # optional, default to 'pathname'
-    strict: # optional, default to '0'
-    input_position: # optional, default to 'bottom'
-    lang: # optional, default to the value of `site.lang`
-    reactions_enabled: # optional, default to the value of `1`
+    repo: dor1a/dor1a.github.io
+    repo_id: R_kgDOPEyouw
+    category: Comments
+    category_id: DIC_kwDOPEyou84CsWwO
+    mapping: pathname
+    strict: 0
+    input_position: bottom
+    lang: site.lang
+    reactions_enabled: 1
 
-# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
-assets:
-  self_host:
-    enabled: # boolean, keep empty means false
-    # specify the Jekyll environment, empty means both
-    # only works if `assets.self_host.enabled` is 'true'
-    env: # [development | production]
+#assets:
+#  self_host:
+#    enabled:
+#    env:
 
 pwa:
-  enabled: true # The option for PWA feature (installable)
+  enabled: true
   cache:
-    enabled: true # The option for PWA offline cache
-    # Paths defined here will be excluded from the PWA cache.
-    # Usually its value is the `baseurl` of another website that
-    # shares the same domain name as the current website.
+    enabled: true
     deny_paths:
-      # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
+      # - "/example"
 
 paginate: 10
 
-# The base URL of your site
 baseurl: ""
 
 # ------------ The following options are not recommended to be modified ------------------
@@ -157,9 +104,8 @@ baseurl: ""
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
-  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
+  syntax_highlighter_opts:
     css_class: highlight
-    # default_lang: console
     span:
       line_numbers: false
     block:
@@ -173,14 +119,12 @@ collections:
 
 defaults:
   - scope:
-      path: "" # An empty string here means all files in the project
+      path: ""
       type: posts
     values:
       layout: post
-      comments: true # Enable comments in posts.
-      toc: true # Display TOC column in posts.
-      # DO NOT modify the following parameter unless you are confident enough
-      # to update the code of all other post links in this project.
+      comments: true
+      toc: true
       permalink: /posts/:title/
   - scope:
       path: _drafts
@@ -188,7 +132,7 @@ defaults:
       comments: false
   - scope:
       path: ""
-      type: tabs # see `site.collections`
+      type: tabs
     values:
       layout: page
       permalink: /:title/
