@@ -59,9 +59,9 @@ theme_mode: dark
 
 cdn: https://pub-8aa7217da3b64b10808fc34634e806ce.r2.dev
 
-avatar: https://web.formellow.com/identity_media/representative_512x512.png
+avatar: /assets/img/logo/formellow_logo_512x512.png
 
-social_preview_image: https://pub-b531046cfad5486cb08321a7da210855.r2.dev/identity_media/formellow_512x136.png
+social_preview_image: /assets/img/social/formellow_512x136.png
 
 toc: true
 
