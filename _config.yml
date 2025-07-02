@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: ForMellow # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
@@ -98,7 +98,7 @@ theme_mode: dark # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: https://web.formellow.com/identity_media/representative_512x512.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
