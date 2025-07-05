@@ -1,0 +1,35 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+@import url('https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/static/pretendard.css');
+
+/*
+html[data-mode=light] {
+}
+*/
+
+html[data-mode=dark] {
+  --main-bg: #111319;
+  --topbar-bg: #111319;
+  --sidebar-bg: #08090c;
+  --site-title-color: #e6e6e6;
+  --site-subtitle-color: #d3d3d3;
+ //-link-color: #0366d6;
+}
+
+header .post-desc, #toc-bar .label, #search-results a, h1, h2, h3, h4, h5 {
+  font-family: "Pretendard", "Microsoft Yahei", sans-serif
+}
+
+body {
+  font-family: "Pretendard", "Microsoft Yahei", sans-serif
+}
