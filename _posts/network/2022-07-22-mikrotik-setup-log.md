@@ -48,8 +48,8 @@ Winbox를 다운로드 받고 실행 시켜주면 된다.
    `File Count: 3`
 4. OK 버튼으로 생성
 
- ![Log Action](/assets/img/post/network/2022-07-22-mikrotik-setup-log/1.png)
- _Log Action_
+![Log Action](/assets/img/post/network/2022-07-22-mikrotik-setup-log/1.png)
+_Log Action_
 
 ## 4. Persistent log rules (로컬디스크 저장 룰 설정)
 
@@ -59,19 +59,19 @@ Winbox를 다운로드 받고 실행 시켜주면 된다.
 4. Topics에 대해 여러개 생성을 위하여 "critical", "error", "warning"에 대해서도 위 작업 반복
 5. 기본 설정되어 있던 Rules 상단 "X" 버튼을 통해 사용 해제
 
- ![Log Rule](/assets/img/post/network/2022-07-22-mikrotik-setup-log/2.png)
- _Log Rule_
+![Log Rule](/assets/img/post/network/2022-07-22-mikrotik-setup-log/2.png)
+_Log Rule_
 
 ## 5. Log 확인
 
 - 메뉴에서 Log 선택
 - "Buffer" 탭에서 usb에 저장 되는지 확인
 
- ![Log](/assets/img/post/network/2022-07-22-mikrotik-setup-log/3.png)
+![Log](/assets/img/post/network/2022-07-22-mikrotik-setup-log/3.png)
 _Log_
 
 - 메뉴에서 Files 선택
 - 정상적으로 저장되는지 확인
 
- ![File List](/assets/img/post/network/2022-07-22-mikrotik-setup-log/4.png)
- _File List_
+![File List](/assets/img/post/network/2022-07-22-mikrotik-setup-log/4.png)
+_File List_

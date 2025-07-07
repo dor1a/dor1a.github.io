@@ -129,16 +129,16 @@ Syntax를 보면 `Tag`라는 항목이 있는데 이 것을 참고하여 작성 
 할당 machine에 우측 … 버튼을 눌러 `Edit ACL tags…` 을 눌러준다.  
 이후 Add tags를 눌러 tag를 붙여준다.
 
- ![Edit ACL tags for android](/assets/img/post/network/2025-04-25-tailscale-setup-acl/2.png)
- _Edit ACL tags for android_
+![Edit ACL tags for android](/assets/img/post/network/2025-04-25-tailscale-setup-acl/2.png)
+_Edit ACL tags for android_
 
 이렇게 설정을 해주면 이제 해당 tag는 ACL이 적용된 상태로 된다.  
 이전의 `Access controls` 탭에서 `preview rules`를 보면 특정 호스트에만 접근이 되는 것을 볼 수 있다.
 
- ![100.65.1.1(andorid) -> 100.64.0.1(nukumori)](/assets/img/post/network/2025-04-25-tailscale-setup-acl/3.png)
- _100.65.1.1(andorid) -> 100.64.0.1(nukumori)_
+![100.65.1.1(andorid) -> 100.64.0.1(nukumori)](/assets/img/post/network/2025-04-25-tailscale-setup-acl/3.png)
+_100.65.1.1(andorid) -> 100.64.0.1(nukumori)_
 
 실제 동작 테스트를 위해 ping을 날려본다.
 
- ![nukumori 만 ping 작동](/assets/img/post/network/2025-04-25-tailscale-setup-acl/4.png)
-  _nukumori 만 ping 작동_
+![nukumori 만 ping 작동](/assets/img/post/network/2025-04-25-tailscale-setup-acl/4.png)
+_nukumori 만 ping 작동_
