@@ -37,7 +37,7 @@ _docker logs_
 
 ## 1. DB Dump
 
-사실 DB Dump는 기본적으로 사용되는 명령어에 대한 글([Postgres - Dump 및 restore](/doc/postgres-dump-bwkGsS1Z6g))이 있긴 하다.  
+사실 DB Dump는 기본적으로 사용되는 명령어에 대한 글([Postgres - Dump 및 restore](/posts/postgres-dump_and_restore/))이 있긴 하다.  
 물론 저 글에 있는 명령어가 기본이기 때문에 사용하여 진행하지만,`container` 환경이기 때문에 명령어의 `which`가 좀 다르긴 하다.
 
 ```shell
