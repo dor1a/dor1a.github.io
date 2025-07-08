@@ -3,7 +3,7 @@ title: Proxmox - hostname 변경
 date: 2023-08-04 17:35:00 +0900
 categories: [virualization]
 tags: [virualization, proxmox]
-description: Proxmox의 Hypervisor에서 hostname 변경하는 방법이다.
+description: Proxmox의 Hypervisor에서 hostname을 변경하는 방법이다.
 ---
 
 >Proxmox Virtual Environment 7.4-3
