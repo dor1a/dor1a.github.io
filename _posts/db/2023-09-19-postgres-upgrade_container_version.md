@@ -15,7 +15,7 @@ description: Docker Postgres의 오래된 container에 대해 버전 업그레�
 >CLI
 {: .prompt-tip}
 
-# 개요
+## 개요
 ---
 
 * Docker를 사용하다 다음과 같은 error가 발생하면서 작동을 하지 않는다.
@@ -26,7 +26,7 @@ _docker logs_
 * Error의 내용을 보면 알다시피 메이저 버전이 올라가게 되면 이전의 DB와 호환이 되지 않아서 발생한다.
 * 이럴 때 DB를 `pg_dumpall` 통하여 Dump 후 다시 복구하는 과정을 거치면서 진행하면 된다.
 
-# 버전 업그레이드
+## 버전 업그레이드
 ---
 
 사실 `container`가 아닌 `host`에서는 `pg_upgrade`라는 명령어를 통해서 진행하면 간단하지만, 이것은 OS에 현재 버전과 업그레이드 할 버전이 동시에 설치가 되어있을 때 가능한 명령어기 때문에 `docker`에서는 사용이 불가능하다.  
@@ -35,7 +35,7 @@ _docker logs_
 
 그러나 굳이, 저걸 사용하면서 할 필요는 없기 때문에 나름의 정석(?) 방법을 통해 진행하는 것이 깔끔하다고 생각한다.
 
-## 1. DB Dump
+### 1. DB Dump
 
 사실 DB Dump는 기본적으로 사용되는 명령어에 대한 글([Postgres - Dump 및 restore](/posts/postgres-dump_and_restore/))이 있긴 하다.  
 물론 저 글에 있는 명령어가 기본이기 때문에 사용하여 진행하지만,`container` 환경이기 때문에 명령어의 `which`가 좀 다르긴 하다.
@@ -51,7 +51,7 @@ dor1@Nukumori ~ ❯ ll | grep -i dump
 -rwxrwxrwx+ 1 dor1 users          12913925 Sep 19 22:27 dump.sql
 ```
 
-## 2. Upgrade 될 container에서 DB restore
+### 2. Upgrade 될 container에서 DB restore
 
 간단하게 새로운 버전에 대해서 데이터 directory를 생성해 준 뒤, restore 절차를 통해 진행한다.
 

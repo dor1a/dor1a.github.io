@@ -12,7 +12,7 @@ description: Go를 이용해서 Postgres DB 접속을 테스트 해 본다.
 >Linux OS
 {: .prompt-tip}
 
-# 개요
+## 개요
 ---
 
 * Postgresql 연동을 위한 sample 코드로 진행
@@ -20,10 +20,10 @@ description: Go를 이용해서 Postgres DB 접속을 테스트 해 본다.
 > ref.
 > * <https://github.com/lib/pq>
 
-# Connection to PostgreSQL
+## Connection to PostgreSQL
 ---
 
-pq library를 받아준다.
+`pq` library를 받아준다.
 
 ```shell
 # Linux

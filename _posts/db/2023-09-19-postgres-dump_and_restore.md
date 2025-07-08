@@ -1,5 +1,5 @@
 ---
-title: Postgres - Dump 및 restore
+title: Postgres - DB dump 및 restore
 date: 2023-09-19 10:10:00 +0900
 categories: [db]
 tags: [db, postgres]
@@ -15,7 +15,7 @@ description: Postgres에서 모든 DB에 대해 dump와 restore 하는 방법을
 >CLI
 {: .prompt-tip}
 
-# 개요
+## 개요
 ---
 
 * `MariaDB`와 거의 같다고 봐도 된다.
@@ -23,7 +23,7 @@ description: Postgres에서 모든 DB에 대해 dump와 restore 하는 방법을
 # 백업 및 복구
 ---
 
-## 1. 백업(Dump)
+### 1. 백업(dump)
 
 * DB 전체 백업
 
@@ -31,7 +31,7 @@ description: Postgres에서 모든 DB에 대해 dump와 restore 하는 방법을
 pg_dumpall -U [username] > ./dumpfile.sql
 ```
 
-## 2. 복구(Restore)
+### 2. 복구(restore)
 
 ```shell
 psql -U {postgres_user} < ./dumpfile.sql

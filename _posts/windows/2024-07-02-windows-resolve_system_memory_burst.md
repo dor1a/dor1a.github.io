@@ -1,5 +1,6 @@
 ---
 title: Windows - System memory burst 대한 해결
+date: 2024-07-02 12:11:00 +0900
 categories: [Windows]
 tags: [windows, memory, burst]
 description: Windows 사용 중 비정상적이게 System memory를 사용하는 경우 해결하는 방법이다.
@@ -14,7 +15,7 @@ description: Windows 사용 중 비정상적이게 System memory를 사용하는
 >GUI
 {: .prompt-tip}
 
-# 개요
+## 개요
 ---
 
 * Windows 사용 중 System memory가 95% 이상 차는 현상이 눈에 띄어 찾아보게 되었다.
@@ -25,7 +26,7 @@ description: Windows 사용 중 비정상적이게 System memory를 사용하는
 > * <https://learn.microsoft.com/en-us/windows/win32/memory/memory-limits-for-windows-releases>
 > * <https://ryuchan.kr/547>
 
-# 원인과 발견
+## 원인과 발견
 ---
 
 어떠한 이유인지 몰라도 Windows를 idle 상태로 하루정도 방치 했을 경우 `Task Manager` → `Process`에서 Memory의 사용율이 90% 이상 차는 현상이 발견 됐다.
@@ -41,13 +42,13 @@ _Non-paged pool이 비정상적으로 확인 됨_
 
 확인해보니 `Non-paged pool`쪽이 이상하게 6.4GB나 먹고 있는 상황으로 확인되었다.
 
-# Non-paged pool의 메모리 누수 현상 확인
+## Non-paged pool의 메모리 누수 현상 확인
 ---
 
 일반적으로 paged 된 것들은 System memory가 아닌 disk의 일부분에 정리하게 되는데, `Non-paged pool`은 page fault가 되지 않은 상태로 있기 때문에 System memory 위에서 그대로 작업이 유지 되고있는 형태다.  
 `Non-paged pool`에서 사용하는 것들이 무엇이 있나 찾아보니, 다음과 같은 방법으로 확인 해볼 수 있긴하다.
 
-## 1. Windows Driver Kit(WDK) 설치
+### 1. Windows Driver Kit(WDK) 설치
 
 다음의 페이지에서 WDK를 설치한다.
 
@@ -60,7 +61,7 @@ _Non-paged pool이 비정상적으로 확인 됨_
 2. SDK 설치
 3. WDK 설치
 
-## 2. poolmon.exe를 통한 tag 확인
+### 2. poolmon.exe를 통한 tag 확인
 
 위의 WDK는 일반적으로 다음과 같은 경로에 설치가 된다.
 
@@ -86,7 +87,7 @@ _pdjb...? 넌 뭐냐...?_
 
 확인 해보니 **Tag**에 `pdjb`라는 놈이 찍혀 있고, **Bytes**를 가장 많이 사용하고 있는 것을 확인하였다.
 
-## 3. 해결?
+### 3. 해결?
 
 `poolmon.exe`의 **Tag** 중 잘 알려진 값은 다음과 같은 위치에 나와있다.
 
@@ -111,7 +112,7 @@ C:\Windows\System32\drivers>
 return 값으로 따로 나오지는 않았다.  
 제대로 찾아보려면 `Livekv`같은 프로그램을 통해 찾아봐야하지만, 굳이 `pdjb`의 **Tag**가 아니더라도 다른 **Tag**가 문제를 일으키면 그걸 또 하나하나 찾아 없애는 것 보다는 `Non-paged pool`의 size를 제한 두는것으로 생각하게 되었다.
 
-# Non-paged pool의 size 제한
+## Non-paged pool의 size 제한
 ---
 
 간단하게 registry로 제한이 가능하다.
@@ -128,7 +129,7 @@ return 값으로 따로 나오지는 않았다.
 ![Non-paged pool에서 제한이 걸려 1GB 이상 올라가지는 않음](/assets/img/post/windows/2024-07-02-windows-resolve_system_memory_burst/4.png)
 _Non-paged pool에서 제한이 걸려 1GB 이상 올라가지는 않음_
 
-# 3rd-party tool: Mem Reduct
+## 3rd-party tool: Mem Reduct
 ---
 
 일반 process에 대한 memory 가 비정상적일 때 사용하는 3rd-party tool이 있다.  

@@ -1,6 +1,6 @@
 ---
 title: Postgres - user 생성과 권한 추가 및 변경 방법
-date: 2023-09-19 10:09:00 +0900
+date: 2023-10-17 18:27:00 +0900
 categories: [db]
 tags: [db, docker, postgres]
 description: Postgres에서 처음 구성 시 user 생성과 권한 추가 및 변경하는 방법이다.
@@ -15,13 +15,13 @@ description: Postgres에서 처음 구성 시 user 생성과 권한 추가 및 �
 >CLI
 {: .prompt-tip}
 
-# 개요
+## 개요
 ---
 
-* `docker`로 `postgres`를 만든 뒤 `Superuser`가 필요하여 작성하게 되었다.
+* `docker`의 postgres내에서 `superuser`가 생성하는 방법이다.
 * `host`에서 package로 설치한 postgres 또한 동일하게 동작한다.
 
-# user 생성과 권한 추가 및 변경 방법
+## user 생성과 권한 추가 및 변경 방법
 ---
 
 우선 container내의 `psql`을 통하여 DB에 접근한다.  

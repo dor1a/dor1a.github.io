@@ -15,14 +15,14 @@ description: BMC(IPMI)의 관리 및 ipmitool의 사용 법에 대해 기록 해
 >CLI
 {: .prompt-tip}
 
-# 개요
+## 개요
 ---
 
 * 서버 사용 시 BMC 기능을 CLI로 사용하는 방법 제시한다.
 * `ipmitool` 명령어를 통하여 사용한다.
 * DGX 서버 같은 경우엔 `nvipmitool`와 같이 custom 되어있는 명령어를 사용하기도 한다.
 
-# BMC
+## BMC
 ---
 
 다음과 같은 명령어로 `ipmitool` 설치 및 사용이 가능하다.
@@ -33,7 +33,7 @@ sudo modprobe ipmi_devintf
 sudo modprobe ipmi_si
 ```
 
-## 1. IP 확인
+### 1. IP 확인
 
 ```shell
 nvadmin@DGX-A100-80G-n1:~$ sudo ipmitool lan print 1
@@ -72,7 +72,7 @@ Attempt Count Reset Int.: 0
 User Lockout Interval   : 0
 ```
 
-## 2. IP 설정
+### 2. IP 설정
 
 전부 설정하였으면 `access on` 처리를 해줘야 접속이 된다.
 
@@ -80,7 +80,7 @@ User Lockout Interval   : 0
 sudo ipmitool lan set 1 access on
 ```
 
-### DHCP IP 설정
+#### DHCP IP 설정
 
 DHCP는 `default 설정 값`이다.
 
@@ -88,7 +88,7 @@ DHCP는 `default 설정 값`이다.
 sudo ipmitool lan set 1 ipsrc dhcp
 ```
 
-### Static IP 설정
+#### Static IP 설정
 
 ```shell
 nvadmin@DGX-A100-80G-n1:~$ sudo ipmitool lan set 1 ipsrc static
@@ -100,7 +100,7 @@ nvadmin@DGX-A100-80G-n1:~$ sudo ipmitool lan set 1 defgw ipaddr 192.168.11.254
 Setting LAN Default Gateway IP to 192.168.11.254
 ```
 
-### (Option 1) MAC 및 arp respond 설정
+#### (Option 1) MAC 및 arp respond 설정
 
 ```shell
 nvadmin@DGX-A100-80G-n1:~$ sudo ipmitool lan set 1 defgw macaddr 00:0e:0c:aa:8e:13
@@ -109,13 +109,13 @@ nvadmin@DGX-A100-80G-n1:~$ sudo ipmitool lan set 1 arp respond on
 Enabling BMC-generated ARP responses
 ```
 
-### (Option 2) USER MD5 설정
+#### (Option 2) USER MD5 설정
 
 ```shell
 sudo ipmitool lan set 1 auth USER MD5
 ```
 
-## 3. 계정 관리
+### 3. 계정 관리
 
 ```shell
 nvadmin@DGX-A100-80G-n1:~$ sudo ipmitool user
@@ -139,7 +139,7 @@ User Commands:
 
 User 관리에서는 `User`, `Password`, `Privileged` 등 설정이 가능하다.
 
-### User 확인
+#### User 확인
 
 ```shell
 nvadmin@DGX-A100-80G-n1:~$ sudo ipmitool user list 1
@@ -156,7 +156,7 @@ ID  Name             Callin  Link Auth  IPMI Msg   Channel Priv Limit
 10                   true    false      false      NO ACCESS
 ```
 
-### User 및 Password 설정
+#### User 및 Password 설정
 
 ```shell
 nvadmin@DGX-A100-80G-n1:~$ sudo ipmitool user set name 4 nvadmin
@@ -167,7 +167,7 @@ Password for user 4:
 nvadmin@DGX-A100-80G-n1:~$ sudo ipmitool user enable 4
 ```
 
-### Channel 및 Privileged Limit 설정
+#### Channel 및 Privileged Limit 설정
 
 ```shell
 nvadmin@DGX-A100-80G-n1:~$ sudo ipmitool channel
@@ -208,7 +208,7 @@ ID  Name             Callin  Link Auth  IPMI Msg   Channel Priv Limit
 10                   true    false      false      NO ACCESS
 ```
 
-## 4. 관리
+### 4. 관리
 
 ```shell
 nvadmin@DGX-A100-80G-n1:~$ sudo ipmitool mc
@@ -238,14 +238,14 @@ MC Commands:
     delloem_url         URL of BMC webserver
 ```
 
-### BMC selftest
+#### BMC selftest
 
 ```shell
 nvadmin@DGX-A100-80G-n1:~$ sudo ipmitool mc selftest
 Selftest: passed
 ```
 
-### BMC reset
+#### BMC reset
 
 ```shell
 nvadmin@DGX-A100-80G-n1:~$ sudo ipmitool mc reset cold
@@ -254,14 +254,14 @@ Sent cold reset command to MC
 
 보통 BMC 동작 불능 일 때 사용하며 `warm reset` 보다 `cold reset`을 더 많이 사용한다.
 
-## 5. BMC 초기화
+### 5. BMC 초기화
 
 간혹 BMC 사용 불능 되는 경우가 있어 해결 법 추가
 
 * **raw 값^(16진수)^은 서버마다 다를 수 있으며 다른 값을 넣으면 장애가 생길 수 있음**
 * 만약 Static IP를 사용한다면 BMC 초기화 시 IP를 다시 설정해야 함
 
-### DGX System
+#### DGX System
 
 >DGX A100, DGX A100 Station 테스트 함
 {: .prompt-info}
