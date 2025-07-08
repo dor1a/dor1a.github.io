@@ -76,11 +76,11 @@ comments:
     repo: dor1a/dor1a.github.io
     repo_id: R_kgDOPEyouw
     category: Comments
-    category_id: DIC_kwDOPEyou84CsWwO
+    category_id:  DIC_kwDOPEyou84CsWwO
     mapping: pathname
     strict: 0
     input_position: bottom
-    lang: site.lang
+    lang: ko
     reactions_enabled: 1
 
 #assets:
@@ -92,8 +92,8 @@ pwa:
   enabled: true
   cache:
     enabled: true
-    deny_paths:
-      # - "/example"
+#    deny_paths:
+#       - "/example"
 
 paginate: 10
 
