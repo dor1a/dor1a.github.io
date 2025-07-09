@@ -156,15 +156,17 @@ curl -X POST <KEYCLOAK_URL>/realms/<REALMS>/protocol/openid-connect/token \
 <https://jwt.io/>  
 아래와 같이 나오면 제대로 입력이 된 것을 확인할 수 있다.
 
-```json
-....
+```jsonc
+{
+...
 
  "roles": [
         "admin",
         "grafanaadmin"
     ],
 
-....
+...
+}
 ```
 
 #### Postman으로 확인
@@ -210,7 +212,7 @@ Grafana에서는 ***grafana.ini*** 에서 추가 작업만 해주면 된다.
 ```shell
 dor1@Nukumori > /volume1/docker/data/monitoring/grafana/config ❯ sudo vi grafana.ini
 
-....
+...
 
 #################################### Generic OAuth ##########################
 [auth.generic_oauth]
@@ -231,7 +233,7 @@ tls_skip_verify_insecure = true
 # GrafanaAdmin 권한을 갖고 있는 user에게는 Grafana의 Admin 적용
 allow_assign_grafana_admin = true
 
-....
+...
 ```
 
 이렇게 한 뒤 `docker restart grafana`를 해주면 Grafana에 **Sign in with Keycloak**이라는 항목이 생겼을 것이다.  

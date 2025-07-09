@@ -62,7 +62,7 @@ dor1@Nukumori ~ ❯ sudo mkdir -p /volume1/docker/data/proxy-backend/postgres_16
 # docker-compose.yml 작성 후 up
 dor1@Nukumori ~ ❯ cd /volume1/docker/compose/proxy-backend
 dor1@Nukumori:/volume1/docker/compose/proxy-backend ❯ sudo vi docker-compose.yml
-....
+...
 #----------------------------BackEnd----------------------------#
   postgres_16:
     image: docker.io/library/postgres:latest
@@ -79,7 +79,7 @@ dor1@Nukumori:/volume1/docker/compose/proxy-backend ❯ sudo vi docker-compose.y
     healthcheck:
       test: ["CMD", "pg_isready"]
       interval: 20s
-....
+...
 dor1@Nukumori:/volume1/docker/compose/proxy-backend ❯ docker-compose up -d postgres_16
 [+] Running 1/1
  ⠿ Container postgres_16  Started

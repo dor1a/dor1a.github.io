@@ -34,7 +34,7 @@ Tailscale에 로그인 후 Console에 접근하면 상단 메뉴에 `Access cont
 ![Basic Access Controls](/assets/img/post/network/2025-04-25-tailscale_setup_acl/1.png)
 _Basic Access Controls_
 
-```json
+```jsonc
 // Example/default ACLs for unrestricted connections.
 {
 	// Declare static groups of users. Use autogroups for all users or users with a specific role.
@@ -90,7 +90,7 @@ Syntax를 보면 `Tag`라는 항목이 있는데 이 것을 참고하여 작성 
 
 작성은 아래와 같이 해봤다.
 
-```json
+```jsonc
 {
 	// Define the tags which can be applied to devices and by which users.
 	"tagOwners": {
