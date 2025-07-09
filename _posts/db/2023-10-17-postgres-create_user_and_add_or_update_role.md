@@ -1,8 +1,8 @@
 ---
 title: Postgres - user 생성과 권한 추가 및 변경 방법
 date: 2023-10-17 18:27:00 +0900
-categories: [db]
-tags: [db, docker, postgres]
+categories: [DB]
+tags: [db, postgres, docker]
 description: Postgres에서 처음 구성 시 user 생성과 권한 추가 및 변경하는 방법이다.
 ---
 

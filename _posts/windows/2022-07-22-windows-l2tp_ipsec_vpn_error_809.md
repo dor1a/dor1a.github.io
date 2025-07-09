@@ -20,8 +20,8 @@ description: Windows L2TP/IPsec VPN에서 발생 하는 809 error에 대해 해�
 
 * Windows에서 L2TP/IPsec VPN 연결 시 809 error가 발생해서 확인 해 봤다.
 
-> **ref.**
-> * <https://docs.microsoft.com/ko-KR/troubleshoot/windows-server/networking/configure-l2tp-ipsec-server-behind-nat-t-device>
+> ref.
+> - <https://docs.microsoft.com/ko-KR/troubleshoot/windows-server/networking/configure-l2tp-ipsec-server-behind-nat-t-device>
 
 ## 해결 방법
 ---

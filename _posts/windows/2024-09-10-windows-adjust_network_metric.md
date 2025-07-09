@@ -22,7 +22,7 @@ description: Windows에서 Network의 Metric(우선순위)를 조절하는 방�
 * Linux에서는 conf 또는 yaml 작성으로 비교적 쉽게 변경이 가능하지만 Windows는 옵션을 숨겨놓아서 찾아야한다.
 
 > ref.
-> * <https://www.elevenforum.com/t/change-network-adapter-interface-connection-priority-order-in-windows-11.13548/>
+> - <https://www.elevenforum.com/t/change-network-adapter-interface-connection-priority-order-in-windows-11.13548/>
 
 ## Metric 값에 대해 확인 하기
 ---

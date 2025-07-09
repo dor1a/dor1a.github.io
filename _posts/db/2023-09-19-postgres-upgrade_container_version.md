@@ -1,9 +1,9 @@
 ---
 title: Postgres - Container 버전 업그레이드
 date: 2023-09-19 10:09:00 +0900
-categories: [db]
-tags: [db, docker, postgres]
-description: Docker Postgres의 오래된 container에 대해 버전 업그레이드 하는 방법이다.
+categories: [DB]
+tags: [db, postgres, docker]
+description: 오래된 Postgres의 Docker container에 대해 버전 업그레이드 하는 방법이다.
 ---
 
 >Postgres 15.4

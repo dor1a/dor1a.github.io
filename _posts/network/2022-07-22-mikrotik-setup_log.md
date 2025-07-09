@@ -2,7 +2,7 @@
 title: Mikrotik - Log 설정
 date: 2022-07-22 11:33:00 +0900
 categories: [Network, HW]
-tags: [mikrotik]
+tags: [network, mikrotik]
 description: Mikrotik 장비에서 Log 설정을 해본다.
 ---
 

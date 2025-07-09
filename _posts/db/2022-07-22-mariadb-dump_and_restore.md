@@ -1,7 +1,7 @@
 ---
 title: MariaDB - DB dump 및 restore
 date: 2022-07-22 13:56:00 +0900
-categories: [db]
+categories: [DB]
 tags: [db, mariadb]
 description: MariaDB에서 모든 DB에 대해 dump와 restore 하는 방법을 간단히 작성해 보았다.
 ---

@@ -1,7 +1,7 @@
 ---
 title: Proxmox - "No valid subscription" 창 없애기
 date: 2024-08-05 11:28:00 +0900
-categories: [virualization]
+categories: [Virualization]
 tags: [virualization, proxmox, lxc]
 description: Proxmox의 Hypervisor에서 귀찮게 하는 "No valid subscription" 창을 없애는 방법이다.
 ---
@@ -23,8 +23,8 @@ description: Proxmox의 Hypervisor에서 귀찮게 하는 "No valid subscription
 ![No valid subscription](/assets/img/post/virtualization/2024-08-05-proxmox-remove_no_valid_subscription_popup/1.png)
 _No valid subscription_
 
-> **ref.**
-> * <https://svrforum.com/os/138940>
+> ref.
+> - <https://svrforum.com/os/138940>
 
 ## 수동으로 창 없애기
 ---

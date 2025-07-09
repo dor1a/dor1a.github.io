@@ -2,7 +2,7 @@
 title: Go - Postgresql connection
 date: 2023-05-14 17:29:00 +0900
 categories: [Development]
-tags: [go]
+tags: [development, go]
 description: Go를 이용해서 Postgres DB 접속을 테스트 해 본다.
 ---
 
@@ -18,7 +18,7 @@ description: Go를 이용해서 Postgres DB 접속을 테스트 해 본다.
 * Postgresql 연동을 위한 sample 코드로 진행
 
 > ref.
-> * <https://github.com/lib/pq>
+> - <https://github.com/lib/pq>
 
 ## Connection to PostgreSQL
 ---

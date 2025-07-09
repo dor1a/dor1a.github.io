@@ -2,7 +2,7 @@
 title: Server - BMC(IPMI) 관리 및 ipmitool 사용 법
 date: 2022-07-22 14:04:00 +0900
 categories: [Hardware]
-tags: [bmc]
+tags: [server, bmc, ipmi]
 description: BMC(IPMI)의 관리 및 ipmitool의 사용 법에 대해 기록 해봤다.
 ---
 

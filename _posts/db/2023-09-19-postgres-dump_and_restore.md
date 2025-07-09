@@ -1,7 +1,7 @@
 ---
 title: Postgres - DB dump 및 restore
 date: 2023-09-19 10:10:00 +0900
-categories: [db]
+categories: [DB]
 tags: [db, postgres]
 description: Postgres에서 모든 DB에 대해 dump와 restore 하는 방법을 간단히 작성해 보았다.
 ---

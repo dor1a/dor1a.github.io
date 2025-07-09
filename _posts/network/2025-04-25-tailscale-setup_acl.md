@@ -2,7 +2,7 @@
 title: Tailscale - ACL 설정
 date: 2025-04-25 11:28:00 +0900
 categories: [Network, ZTNA]
-tags: [tailscale]
+tags: [network, tailscale]
 description: Tailscale의 Network ACL 구성을 해본다.
 ---
 
@@ -22,8 +22,8 @@ description: Tailscale의 Network ACL 구성을 해본다.
 * 네트워크적으로 ACL(Access Control List)을 만들 때 사용한다.
 
 > ref.
-> * <https://tailscale.com/kb/1337/acl-syntax>
-> * <https://tailscale.com/kb/1068/tags#define-a-tag>
+> - <https://tailscale.com/kb/1337/acl-syntax>
+> - <https://tailscale.com/kb/1068/tags#define-a-tag>
 
 ## Access controls
 ---

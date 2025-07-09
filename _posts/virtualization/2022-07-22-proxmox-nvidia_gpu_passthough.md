@@ -1,7 +1,7 @@
 ---
 title: Proxmox - NVIDIA GPU Passthrough
 date: 2022-07-22 11:27:00 +0900
-categories: [virualization]
+categories: [Virualization]
 tags: [virualization, proxmox, nvidia, vm]
 description: Proxmox의 VM에서 NVIDIA GPU Passthrough를 사용하는 방법이다.
 ---

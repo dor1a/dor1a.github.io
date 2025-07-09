@@ -2,7 +2,7 @@
 title: Windows - System memory burst 대한 해결
 date: 2024-07-02 12:11:00 +0900
 categories: [Windows]
-tags: [windows, memory, burst]
+tags: [windows, memory]
 description: Windows 사용 중 비정상적이게 System memory를 사용하는 경우 해결하는 방법이다.
 ---
 
@@ -22,9 +22,9 @@ description: Windows 사용 중 비정상적이게 System memory를 사용하는
 * `poolmon.exe`을 통해 `pdjb`의 **Tag**를 찾아냈지만, 정확히 이 값이 무엇을 하는지는 확인이 안되어 `Non-paged pool`의 값을 제한하는 형식으로 진행했다.
 * 또한 3rd-party 프로그램을 통해 process의 memory도 줄일 수 있는 방법을 찾게 되었다.
 
-> **ref.**
-> * <https://learn.microsoft.com/en-us/windows/win32/memory/memory-limits-for-windows-releases>
-> * <https://ryuchan.kr/547>
+> ref.
+> - <https://learn.microsoft.com/en-us/windows/win32/memory/memory-limits-for-windows-releases>
+> - <https://ryuchan.kr/547>
 
 ## 원인과 발견
 ---

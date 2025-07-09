@@ -20,8 +20,8 @@ description: Windows L2TP/IPsec VPN에서 발생 하는 787 error에 대해 해�
 
 * Windows에서 L2TP/IPsec VPN 연결 시 787 Error가 출력이 되어 확인하게 되었다.
 
-> **ref.**
-> * <https://docs.microsoft.com/ko-kr/troubleshoot/windows-server/networking/l2tp-vpn-fails-with-error-787>
+> ref.
+> - <https://docs.microsoft.com/ko-kr/troubleshoot/windows-server/networking/l2tp-vpn-fails-with-error-787>
 
 ## 해결 방법
 ---
