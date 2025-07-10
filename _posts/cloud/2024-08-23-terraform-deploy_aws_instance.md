@@ -71,11 +71,11 @@ Terraform은 .tf의 확장자를 가지고 있는 파일로 배포 및 운영이
 ```shell
 # 디렉토리 생성 및 이동
 jhkim@hq-is-lxc-provisioning ~ > mkdir -p ./aws_manage/terraform && cd ./aws_manage/terraform
-# aws-provider.tf 생성(access_key, secret_key는 보안으로 인해 제거)
+# aws-provider.tf 생성
 jhkim@hq-is-lxc-provisioning ~/aws_manage/terraform > vi aws-provider.tf
 provider "aws" {
-  access_key = ""
-  secret_key = ""
+  access_key = "ACCESS_KEY"
+  secret_key = "SECRET_KEY"
   region = "ap-northeast-2"
 }
 ```
