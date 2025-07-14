@@ -1,7 +1,7 @@
 ---
-title: Linux(Ubuntu) - nmap 사용 해보기
+title: Ubuntu - nmap 사용 해보기
 date: 2023-09-10 18:29:00 +0900
-categories: [Linux]
+categories: [Linux, Ubuntu]
 tags: [linux, ubuntu, nmap]
 description: Linux에서 강력한 Network mapper를 사용 해보았다.
 ---

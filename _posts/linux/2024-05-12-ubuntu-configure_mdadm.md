@@ -1,7 +1,7 @@
 ---
-title: Linux(Ubuntu) - mdadm을 통해 Software RAID 구성
+title: Ubuntu - mdadm을 통해 Software RAID 구성
 date: 2024-03-12 09:45:00 +0900
-categories: [Linux]
+categories: [Linux, Ubuntu]
 tags: [linux, ubuntu, mdadm, raid]
 description: Ubuntu에서 mdadm의 패키지를 통해 Software RAID를 구성하는 방법이다.
 ---

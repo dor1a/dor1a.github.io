@@ -1,7 +1,7 @@
 ---
-title: Linux(Ubuntu) - unattended-upgrades 설정
+title: Ubuntu - unattended-upgrades 설정
 date: 2022-12-20 12:11:00 +0900
-categories: [Linux]
+categories: [Linux, Ubuntu]
 tags: [linux, ubuntu, unattended-upgrades]
 description: Ubuntu에서 자동으로 apt upgrade 하는 것을 방지하는 방법이다.
 ---
@@ -127,7 +127,7 @@ Service는 enabled & disabled로 처리가 가능하다.
 dor1@is-m1 ~ ❯ sudo dpkg-reconfigure unattended-upgrades
 ```
 
-![CLI UI](/assets/img/post/linux/2022-12-20-linux-setup_unattended-upgrades/1.png)
+![CLI UI](/assets/img/post/linux/2022-12-20-ubuntu-setup_unattended-upgrades/1.png)
 _CLI UI_
 
 간단히 `<Yes>`하면 enabled, `<No>` 하면 disabled 이다.

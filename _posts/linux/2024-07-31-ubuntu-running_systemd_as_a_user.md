@@ -1,7 +1,7 @@
 ---
-title: Linux(Ubuntu) - User로 systemd 사용하기
+title: Ubuntu - User로 systemd 사용하기
 date: 2024-07-31 11:04:00 +0900
-categories: [Linux]
+categories: [Linux, Ubuntu]
 tags: [linux, ubuntu, systemd]
 description: sudo 권한이 없는 상태로 systemctl 명령어를 사용하는 방법이다.
 ---

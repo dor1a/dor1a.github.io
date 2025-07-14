@@ -1,7 +1,7 @@
 ---
-title: Linux(Ubuntu) - rsync 사용 해보기
+title: Ubuntu - rsync 사용 해보기
 date: 2023-01-02 16:36:00 +0900
-categories: [Linux]
+categories: [Linux, Ubuntu]
 tags: [linux, ubuntu, rsync]
 description: 잘 알려진 rsync를 사용 해보았다.
 ---

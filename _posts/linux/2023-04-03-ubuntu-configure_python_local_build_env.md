@@ -1,7 +1,7 @@
 ---
-title: Linux(Ubuntu) - Python Local(build) env 구성
+title: Ubuntu - Python Local(build) env 구성
 date: 2023-04-03 15:36:00 +0900
-categories: [Linux]
+categories: [Linux, Ubuntu]
 tags: [linux, ubuntu, python]
 description: Ubuntu에서 Python에 대해 Local Env(환경)을 구성하는 방법이다.
 ---

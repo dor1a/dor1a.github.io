@@ -1,7 +1,7 @@
 ---
-title: Linux(Ubuntu) - Let's Encrypt의 *(Wildcard) 인증서를 certbot을 통해 발급 받기
+title: Ubuntu - Let's Encrypt의 *(Wildcard) 인증서를 certbot을 통해 발급 받기
 date: 2024-08-08 11:22:00 +0900
-categories: [Linux]
+categories: [Linux, Ubuntu]
 tags: [linux, ubuntu, certbot]
 description: Ubuntu에서 도메인에 대해 무료 인증서인 Let's Encrypt사의 *(Wildcard) 인증서를 certbot으로 발급 받는 방법이다.
 ---
@@ -209,13 +209,13 @@ Press Enter to Continue
 이 상태에서 domain에 DNS TXT record를 입력한다.  
 위에 나와있는 것과 같이 value를 같이 넣어줘야 한다.
 
-![TXT(SPF)](/assets/img/post/linux/2024-08-08-linux-obtain_letsencrypt_wildcard_cert_using_certbot/1.png)
+![TXT(SPF)](/assets/img/post/linux/2024-08-08-ubuntu-obtain_letsencrypt_wildcard_cert_using_certbot/1.png)
 _TXT(SPF)_
 
 다 넣었으면 위에 나와있는 Admin Toolbox와 같이 입력하여서 확인해본다.  
 <https://toolbox.googleapps.com/apps/dig/#TXT/_acme-challenge.norikae.kro.kr.>
 
-![;ANSWER 값 확인](/assets/img/post/linux/2024-08-08-linux-obtain_letsencrypt_wildcard_cert_using_certbot/2.png)
+![;ANSWER 값 확인](/assets/img/post/linux/2024-08-08-ubuntu-obtain_letsencrypt_wildcard_cert_using_certbot/2.png)
 _;ANSWER 값 확인_
 
 **;ANSWER** 값에 나와있는 것과 같이 TXT가 제대로 입력이 되었으면 진행이 가능하다.

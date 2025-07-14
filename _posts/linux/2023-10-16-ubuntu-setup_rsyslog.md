@@ -1,7 +1,7 @@
 ---
-title: Linux(Ubuntu) - rsyslog 설정
+title: Ubuntu - rsyslog 설정
 date: 2023-10-16 10:19:00 +0900
-categories: [Linux]
+categories: [Linux, Ubuntu]
 tags: [linux, ubuntu, rsyslog]
 description: Ubuntu에서 logging 패키지인 rsyslog의 설정하는 방법이다.
 ---
