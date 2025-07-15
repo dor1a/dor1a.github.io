@@ -1,8 +1,8 @@
 ---
 title: Proxmox - Cluster 삭제
 date: 2023-08-10 10:55:00 +0900
-categories: [Virualization]
-tags: [virualization, proxmox, cluster]
+categories: [Virtualization]
+tags: [virtualization, proxmox, cluster]
 description: Proxmox의 Hypervisor에서 Cluster를 삭제하는 방법이다.
 ---
 

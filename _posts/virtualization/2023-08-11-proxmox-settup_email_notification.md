@@ -1,8 +1,8 @@
 ---
 title: Proxmox - E-Mail notification 설정
 date: 2023-08-11 09:44:00 +0900
-categories: [Virualization]
-tags: [virualization, proxmox]
+categories: [Virtualization]
+tags: [virtualization, proxmox]
 description: Proxmox의 Hypervisor에서 E-Mail Notification을 설정하는 방법이다.
 ---
 
