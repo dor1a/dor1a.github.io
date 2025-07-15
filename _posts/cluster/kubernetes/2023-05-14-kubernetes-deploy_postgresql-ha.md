@@ -66,7 +66,7 @@ dor1@is-master ~/postgresql-ha ❯ helm show values bitnami/postgresql-ha > valu
 ```
 
 `values.yaml`에는 엄청 많은 parameters와 함께 주석이 들어가 있기 때문에 주석을 제거 해준 뒤 필요한 parameter만 정의해준다.  
-`vim`으로 연 뒤에 [vim 명령 정리](/doc/linux-vim-4xZDWYcGOl) 항목을 따라 주석 제거를 해준다.  
+`vim`으로 연 뒤에 [vim 명령 정리](/posts/linux-vim_command/) 항목을 따라 주석 제거를 해준다.  
 `vim`으로 주석 제거 후 아래 항목에서 필요한 설정을 진행한다. (parameter가 너무 많다 보니 필요 부분 외 모두 주석 처리)  
 [witness](https://repmgr.org/docs/5.3/repmgrd-witness-server.html)항목은 필요 시에 `true`로 설정하여 만들어준다.  
 또한 `rook-ceph`을 사용한다면 `persistence` 부분의 `storageClass`를 변경해준다.
