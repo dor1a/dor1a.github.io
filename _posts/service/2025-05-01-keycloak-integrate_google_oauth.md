@@ -2,7 +2,7 @@
 title: Keycloak - Google OAuth 연동
 date: 2025-05-01 16:16:00 +0900
 categories: [Service]
-tags: [service, keycloak, google, docker]
+tags: [service, keycloak, auth, docker]
 description: Docker에서 구동 중인 Keycloak에서 Google OAuth를 연동 해봤다.
 ---
 

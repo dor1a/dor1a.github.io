@@ -2,7 +2,7 @@
 title: Debian - DNS Client 설정
 date: 2024-11-04 14:36:00 +0900
 categories: [Linux, Debian]
-tags: [linux, debian, dns]
+tags: [linux, debian, dns, openmediavault]
 description: Debian에서 DNS Client 설정을 해보는 방법이다.
 ---
 

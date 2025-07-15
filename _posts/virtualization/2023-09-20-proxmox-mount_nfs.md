@@ -2,7 +2,7 @@
 title: Proxmox - LXC에서 NFS mount 하기
 date: 2023-09-20 17:49:00 +0900
 categories: [Virualization]
-tags: [virualization, proxmox, lxc]
+tags: [virualization, proxmox, lxc, nfs]
 description: Proxmox의 LXC에서 NFS mount 하는 방법이다.
 ---
 

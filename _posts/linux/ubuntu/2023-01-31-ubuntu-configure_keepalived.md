@@ -21,7 +21,7 @@ description: Ubuntu에서 HA(High Availability)에 가장 많이 사용하는 �
 * `keepalived`는 주로 `haproxy`와 많이 사용이 되며 server 간 HA(High Availability) 구성을 한다.
 * `keepalived`와 `haproxy`는 따로 사용이 가능하며, 보통 `keepalived`는 vIP 목적으로 사용된다.
 
-![keepalived](/assets/img/post/linux/2023-01-31-ubuntu-configure_keepalived/1.png)
+![keepalived](/assets/img/post/linux/ubuntu/2023-01-31-ubuntu-configure_keepalived/1.png)
 _keepalived_
 
 ## 설치

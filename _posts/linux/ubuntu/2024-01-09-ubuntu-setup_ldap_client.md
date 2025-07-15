@@ -523,7 +523,7 @@ CLI로 설정 하려면 다음과 같이 입력하면 된다.
 sudo pam-auth-update
 ```
 
-![Create home directory on login 선택](/assets/img/post/linux/2024-01-09-ubuntu-setup_ldap_client/1.png)
+![Create home directory on login 선택](/assets/img/post/linux/ubuntu/2024-01-09-ubuntu-setup_ldap_client/1.png)
 _Create home directory on login 선택_
 
 PAM의 session의 대한 config는`/etc/pam.d/common-session`에서 확인이 가능하다.
@@ -637,13 +637,13 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
 
 설치 중간에 prompt가 나오게 되며 입력시 config가 완성된다.
 
-![1. LDAP server address 입력](/assets/img/post/linux/2024-01-09-ubuntu-setup_ldap_client/2.png)
+![1. LDAP server address 입력](/assets/img/post/linux/ubuntu/2024-01-09-ubuntu-setup_ldap_client/2.png)
 _1. LDAP server address 입력_
 
-![2. LDAP server dn 입력](/assets/img/post/linux/2024-01-09-ubuntu-setup_ldap_client/3.png)
+![2. LDAP server dn 입력](/assets/img/post/linux/ubuntu/2024-01-09-ubuntu-setup_ldap_client/3.png)
 _2. LDAP server dn 입력_
 
-![3. Name service에 사용 될 config 체크(기본적으로 passwd/group/shadow 체크)](/assets/img/post/linux/2024-01-09-ubuntu-setup_ldap_client/4.png)
+![3. Name service에 사용 될 config 체크(기본적으로 passwd/group/shadow 체크)](/assets/img/post/linux/ubuntu/2024-01-09-ubuntu-setup_ldap_client/4.png)
 _3. Name service에 사용 될 config 체크(기본적으로 passwd/group/shadow 체크)_
 
 기본적인 설정을 끝내면 설치가 정상적으로 완료 된다.  
@@ -665,7 +665,7 @@ CLI로 설정 하려면 다음과 같이 입력하면 된다.
 sudo pam-auth-update
 ```
 
-![Create home directory on login 선택](/assets/img/post/linux/2024-01-09-ubuntu-setup_ldap_client/5.png)
+![Create home directory on login 선택](/assets/img/post/linux/ubuntu/2024-01-09-ubuntu-setup_ldap_client/5.png)
 _Create home directory on login 선택_
 
 PAM의 session의 대한 config는`/etc/pam.d/common-session`에서 확인이 가능하다.
@@ -764,25 +764,25 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
 설치 중간에 prompt가 출력 되며, config를 넣어주게 되어있다.  
 prompt는 다음과 같이 순서대로 진행하면 된다.
 
-![1. LDAP server address 입력](/assets/img/post/linux/2024-01-09-ubuntu-setup_ldap_client/6.png)
+![1. LDAP server address 입력](/assets/img/post/linux/ubuntu/2024-01-09-ubuntu-setup_ldap_client/6.png)
 _1. LDAP server address 입력_
 
-![2. Domain 입력](/assets/img/post/linux/2024-01-09-ubuntu-setup_ldap_client/7.png)
+![2. Domain 입력](/assets/img/post/linux/ubuntu/2024-01-09-ubuntu-setup_ldap_client/7.png)
 _2. Domain 입력_
 
-![3. LDAP version 선택](/assets/img/post/linux/2024-01-09-ubuntu-setup_ldap_client/8.png)
+![3. LDAP version 선택](/assets/img/post/linux/ubuntu/2024-01-09-ubuntu-setup_ldap_client/8.png)
 _3. LDAP version 선택_
 
-![4. Local root DB 설정](/assets/img/post/linux/2024-01-09-ubuntu-setup_ldap_client/9.png)
+![4. Local root DB 설정](/assets/img/post/linux/ubuntu/2024-01-09-ubuntu-setup_ldap_client/9.png)
 _4. Local root DB 설정_
 
-![5. Local root DB login 설정](/assets/img/post/linux/2024-01-09-ubuntu-setup_ldap_client/10.png)
+![5. Local root DB login 설정](/assets/img/post/linux/ubuntu/2024-01-09-ubuntu-setup_ldap_client/10.png)
 _5. Local root DB login 설정_
 
-![6. LDAP root 계정 입력](/assets/img/post/linux/2024-01-09-ubuntu-setup_ldap_client/11.png)
+![6. LDAP root 계정 입력](/assets/img/post/linux/ubuntu/2024-01-09-ubuntu-setup_ldap_client/11.png)
 _6. LDAP root 계정 입력_
 
-![7. LDAP root 계정 비밀번호 입력](/assets/img/post/linux/2024-01-09-ubuntu-setup_ldap_client/12.png)
+![7. LDAP root 계정 비밀번호 입력](/assets/img/post/linux/ubuntu/2024-01-09-ubuntu-setup_ldap_client/12.png)
 _7. LDAP root 계정 비밀번호 입력_
 
 기본적인 설정을 끝내면 설치가 정상적으로 완료 된다.  
@@ -804,7 +804,7 @@ CLI로 설정 하려면 다음과 같이 입력하면 된다.
 sudo pam-auth-update
 ```
 
-![Create home directory on login 선택](/assets/img/post/linux/2024-01-09-ubuntu-setup_ldap_client/5.png)
+![Create home directory on login 선택](/assets/img/post/linux/ubuntu/2024-01-09-ubuntu-setup_ldap_client/5.png)
 _Create home directory on login 선택_
 
 PAM의 session의 대한 config는`/etc/pam.d/common-session`에서 확인이 가능하다.

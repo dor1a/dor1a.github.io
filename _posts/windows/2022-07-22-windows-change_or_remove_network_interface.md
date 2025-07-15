@@ -2,7 +2,7 @@
 title: Windows - 네트워크 인터페이스(Netowrk interface)의 이름 변경 또는 삭제 방법
 date: 2022-07-22 14:30:00 +0900
 categories: [Windows]
-tags: [windows, interface]
+tags: [windows, network]
 description: Windows의 ncpa.cpl 상의 네트워크 인터페이스의 이름 변경 또는 삭제하는 방법이다.
 ---
 

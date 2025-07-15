@@ -22,7 +22,7 @@ description: Ubuntu에서 L7으로 사용하는 Proxy server인 haproxy의 구�
 * Proxy의 쓰임새는 Client의 access root는 보통 내부에서 우회(Outbound 접근) 할 때 많이 사용하지만, Reverse Proxy는 역으로 외부에서 내부(Inbound) 접근 시에 사용된다.
 * `haproxy`는 보통 여러 node에 대상으로 접근 시 LB(Load Balancing)를 위해 사용되며 performance 또한 다른 proxy server 대비 우수하다.
 
-![haproxy](/assets/img/post/linux/2023-01-31-ubuntu-configure_haproxy/1.png)
+![haproxy](/assets/img/post/linux/ubuntu/2023-01-31-ubuntu-configure_haproxy/1.png)
 _haproxy_
 
 ## 설치
@@ -245,10 +245,10 @@ Jan 31 10:37:58 is-ha1 systemd[1]: Started HAProxy Load Balancer.
 구체적인 설정 방법은 아래의 링크를 통해 확인이 가능하다  
 <https://www.haproxy.com/documentation/hapee/latest/configuration/config-sections/listen/>
 
-![vIP(10.1.20.100)로 구성](/assets/img/post/linux/2023-01-31-ubuntu-configure_haproxy/2.png)
+![vIP(10.1.20.100)로 구성](/assets/img/post/linux/ubuntu/2023-01-31-ubuntu-configure_haproxy/2.png)
 _vIP(10.1.20.100)로 구성_
 
-![is-mn1(172.16.1.101)으로도 확인 가능](/assets/img/post/linux/2023-01-31-ubuntu-configure_haproxy/3.png)
+![is-mn1(172.16.1.101)으로도 확인 가능](/assets/img/post/linux/ubuntu/2023-01-31-ubuntu-configure_haproxy/3.png)
 _is-mn1(172.16.1.101)으로도 확인 가능_
 
 결과적으로 `10.1.20.100`의 `vIP`를 통하여 `is-mn1(172.16.1.101)`의 `32222`포트가 proxy 되는 것을 확인 할 수 있다.  

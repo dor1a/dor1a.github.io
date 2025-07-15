@@ -2,7 +2,7 @@
 title: Grafana - Keycloak 연동
 date: 2025-05-04 16:38:00 +0900
 categories: [Service]
-tags: [service, grafana, keycloak, docker]
+tags: [service, grafana, keycloak, docker, auth]
 description: Docker에서 구동 중인 grafana에서 Keycloak을 연동 해봤다.
 ---
 

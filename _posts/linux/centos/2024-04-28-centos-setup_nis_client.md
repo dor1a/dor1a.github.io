@@ -25,7 +25,7 @@ description: CentOS에서 NIS(Network Information Service)의 client를 설정�
 * Server 설정은 다음과 같은 link로 가면 된다.  
   [Linux(CentOS) - NIS Server 구축](/posts/centos-build_nis_server)
 
-![NIS Server와 Client 구성도](/assets/img/post/linux/2024-04-28-centos-setup_nis_client/1.png)
+![NIS Server와 Client 구성도](/assets/img/post/linux/centos/2024-04-28-centos-setup_nis_client/1.png)
 _NIS Server와 Client 구성도_
 
 ## 설치 및 세팅

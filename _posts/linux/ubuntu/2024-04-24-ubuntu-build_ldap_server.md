@@ -101,10 +101,10 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host
 
 설치 중간에 `admin`계정에 대한 password를 입력하는 prompt가 나온다.
 
-![Admin password 입력](/assets/img/post/linux/2024-04-24-ubuntu-build_ldap_server/1.png)
+![Admin password 입력](/assets/img/post/linux/ubuntu/2024-04-24-ubuntu-build_ldap_server/1.png)
 _Admin password 입력_
 
-![Admin password 확인](/assets/img/post/linux/2024-04-24-ubuntu-build_ldap_server/2.png)
+![Admin password 확인](/assets/img/post/linux/ubuntu/2024-04-24-ubuntu-build_ldap_server/2.png)
 _Admin password 확인_
 
 만약 `admin`password에 대해 잘못 입력했다면 다음과 같은 명령어로 변경은 가능하다.
@@ -126,25 +126,25 @@ sudo dpkg-reconfigure slapd
 
 prompt는 순차적으로 진행한다.
 
-![1. 기존 DB의 OpenLDAP server configuration에 대해 생략할지 선택](/assets/img/post/linux/2024-04-24-ubuntu-build_ldap_server/3.png)
+![1. 기존 DB의 OpenLDAP server configuration에 대해 생략할지 선택](/assets/img/post/linux/ubuntu/2024-04-24-ubuntu-build_ldap_server/3.png)
 _1. 기존 DB의 OpenLDAP server configuration에 대해 생략할지 선택_
 
-![2. base DN 설정 (example.com을 입력하면 향후 conf에서는 dc=example, dc=com으로 나타남)](/assets/img/post/linux/2024-04-24-ubuntu-build_ldap_server/4.png)
+![2. base DN 설정 (example.com을 입력하면 향후 conf에서는 dc=example, dc=com으로 나타남)](/assets/img/post/linux/ubuntu/2024-04-24-ubuntu-build_ldap_server/4.png)
 _2. base DN 설정 (example.com을 입력하면 향후 conf에서는 dc=example, dc=com으로 나타남)_
 
-![3. Organization name 설정](/assets/img/post/linux/2024-04-24-ubuntu-build_ldap_server/5.png)
+![3. Organization name 설정](/assets/img/post/linux/ubuntu/2024-04-24-ubuntu-build_ldap_server/5.png)
 _3. Organization name 설정_
 
-![4. Admin password 입력(위에서 생성한 password를 입력함)](/assets/img/post/linux/2024-04-24-ubuntu-build_ldap_server/6.png)
+![4. Admin password 입력(위에서 생성한 password를 입력함)](/assets/img/post/linux/ubuntu/2024-04-24-ubuntu-build_ldap_server/6.png)
 _4. Admin password 입력(위에서 생성한 password를 입력함)_
 
-![5. Admin password 확인](/assets/img/post/linux/2024-04-24-ubuntu-build_ldap_server/7.png)
+![5. Admin password 확인](/assets/img/post/linux/ubuntu/2024-04-24-ubuntu-build_ldap_server/7.png)
 _5. Admin password 확인_
 
-![6. apt purge 시 slapd의 DB purged의 여부 확인](/assets/img/post/linux/2024-04-24-ubuntu-build_ldap_server/8.png)
+![6. apt purge 시 slapd의 DB purged의 여부 확인](/assets/img/post/linux/ubuntu/2024-04-24-ubuntu-build_ldap_server/8.png)
 _6. apt purge 시 slapd의 DB purged의 여부 확인_
 
-![7. 새로운 DB 생성 시 오래된 DB에 대해 이전 확인](/assets/img/post/linux/2024-04-24-ubuntu-build_ldap_server/9.png)
+![7. 새로운 DB 생성 시 오래된 DB에 대해 이전 확인](/assets/img/post/linux/ubuntu/2024-04-24-ubuntu-build_ldap_server/9.png)
 _7. 새로운 DB 생성 시 오래된 DB에 대해 이전 확인_
 
 `slapd`의 config값의 대한 수정 할 수 있는 항목들은 `/etc/ldap/slapd.d`이하에 `cn=config.ldif`에서 확인 할 수 있으며, 이 값은 보안상 동적으로 변경 되기에 변경할 수 없다.  

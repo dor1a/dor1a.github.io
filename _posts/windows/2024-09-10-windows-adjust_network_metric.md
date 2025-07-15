@@ -2,7 +2,7 @@
 title: Windows - 네트워크(Network) Metric 조절하기
 date: 2024-09-10 16:55:00 +0900
 categories: [Windows]
-tags: [windows, metric]
+tags: [windows, network]
 description: Windows에서 Network의 Metric(우선순위)를 조절하는 방법이다.
 ---
 

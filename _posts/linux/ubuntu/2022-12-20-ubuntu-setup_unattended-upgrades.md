@@ -127,7 +127,7 @@ Service는 enabled & disabled로 처리가 가능하다.
 dor1@is-m1 ~ ❯ sudo dpkg-reconfigure unattended-upgrades
 ```
 
-![CLI UI](/assets/img/post/linux/2022-12-20-ubuntu-setup_unattended-upgrades/1.png)
+![CLI UI](/assets/img/post/linux/ubuntu/2022-12-20-ubuntu-setup_unattended-upgrades/1.png)
 _CLI UI_
 
 간단히 `<Yes>`하면 enabled, `<No>` 하면 disabled 이다.

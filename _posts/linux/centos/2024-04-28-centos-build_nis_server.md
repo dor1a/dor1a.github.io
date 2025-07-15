@@ -25,7 +25,7 @@ description: CentOS에서 계정 관리하는 NIS(Network Information Service)�
 * Client 설정은 다음과 같은 link로 가면 된다.  
   [Linux(CentOS) - NIS Client 설정](/posts/centos-setup_nis_client)
 
-![NIS Server와 Client 구성도](/assets/img/post/linux/2024-04-28-centos-build_nis_server/1.png)
+![NIS Server와 Client 구성도](/assets/img/post/linux/centos/2024-04-28-centos-build_nis_server/1.png)
 _NIS Server와 Client 구성도_
 
 ## 설치 및 세팅
