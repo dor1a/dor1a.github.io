@@ -6,7 +6,7 @@ tags: [cluster, ceph, cephadm]
 description: Ceph을 cephadm으로 설치하는 방법이다.
 ---
 
->v17.2.5 (quincy) / Ubuntu 20.04 LTS
+>Ceph v17.2.5 (quincy) / Ubuntu 20.04 LTS
 {: .prompt-info}
 
 >Host

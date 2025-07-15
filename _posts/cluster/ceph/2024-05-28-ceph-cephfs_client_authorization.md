@@ -2,11 +2,11 @@
 title: Ceph - CephFS Client 권한 부여
 date: 2024-05-28 17:43:00 +0900
 categories: [Cluster, Ceph]
-tags: [cluster, ceph, cephadm]
+tags: [cluster, ceph, cephfs]
 description: Ceph의 CephFS mount 시 client에서 권한을 받는 방법이다.
 ---
 
->v18.2.2(reef) / Ubuntu 22.04 LTS
+>Ceph v18.2.2(reef) / Ubuntu 22.04 LTS
 {: .prompt-info}
 
 >Host

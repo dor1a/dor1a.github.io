@@ -1,6 +1,6 @@
 ---
 title: Linux - nvidia-smi 명령어 정리
-date: 2022-07-22 10:43:00 +0900
+date: 2022-08-11 16:29:00 +0900
 categories: [Linux]
 tags: [linux, nvidia]
 description: Linux에서 NVIDIA GPU Driver를 설치하면 사용하게 되는 nvidia-smi의 명령어를 정리해 보았다.
