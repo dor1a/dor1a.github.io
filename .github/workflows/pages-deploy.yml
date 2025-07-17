@@ -84,7 +84,7 @@ jobs:
             [
               {
                 "title": "✅ Blog Deployment Succeeded",
-                "description": "[dor1a.github.io](https://dor1a.github.io)",
+                "description": "https://dor1a.github.io",
                 "color": 3066993,
                 "fields": [
                   {
@@ -99,7 +99,7 @@ jobs:
                   },
                   {
                     "name": "📄 Workflow Logs",
-                    "value": "[View Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})",
+                    "value": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}",
                     "inline": false
                   }
                 ]
@@ -132,7 +132,7 @@ jobs:
                   },
                   {
                     "name": "📄 Workflow Logs",
-                    "value": "[View Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})",
+                    "value": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}",
                     "inline": false
                   }
                 ]
