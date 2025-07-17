@@ -80,31 +80,12 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: GitHub Actions
           DISCORD_AVATAR: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-          DISCORD_EMBEDS: |
-            [
-              {
-                "title": "✅ Blog Deployment Succeeded",
-                "description": "https://dor1a.github.io",
-                "color": 3066993,
-                "fields": [
-                  {
-                    "name": "👤 Committer",
-                    "value": "${{ github.actor }}",
-                    "inline": true
-                  },
-                  {
-                    "name": "📝 Commit Message",
-                    "value": "${{ github.event.head_commit.message }}".split("\n")[0],
-                    "inline": false
-                  },
-                  {
-                    "name": "📄 Workflow Logs",
-                    "value": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}",
-                    "inline": false
-                  }
-                ]
-              }
-            ]
+          DISCORD_CONTENT: |
+            ✅ Blog deployment succeeded!
+            🔗 https://dor1a.github.io
+            👤 Committer: ${{ github.actor }}
+            📝 Message: ${{ github.event.head_commit.message }}
+            📄 Logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
       - name: ❌ Deployment Failure Notification
         if: failure()
@@ -113,28 +94,8 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: GitHub Actions
           DISCORD_AVATAR: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-          DISCORD_EMBEDS: |
-            [
-              {
-                "title": "❌ Blog Deployment Failed",
-                "description": "Deployment failed. Please check the logs.",
-                "color": 15158332,
-                "fields": [
-                  {
-                    "name": "👤 Committer",
-                    "value": "${{ github.actor }}",
-                    "inline": true
-                  },
-                  {
-                    "name": "📝 Commit Message",
-                    "value": "${{ github.event.head_commit.message }}".split("\n")[0],
-                    "inline": false
-                  },
-                  {
-                    "name": "📄 Workflow Logs",
-                    "value": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}",
-                    "inline": false
-                  }
-                ]
-              }
-            ]
+          DISCORD_CONTENT: |
+            ❌ Blog deployment failed!
+            👤 Committer: ${{ github.actor }}
+            📝 Message: ${{ github.event.head_commit.message }}
+            📄 Logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
