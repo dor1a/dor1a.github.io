@@ -101,7 +101,9 @@ jobs:
                        "inline": false
                      }
                    ],
-                   "timestamp": "${{ github.event.head_commit.timestamp }}"
+                   "footer": {
+                     "text": "Timestamp: ${{ github.event.head_commit.timestamp }}"
+                   }
                  }]
                }' \
                ${{ secrets.DISCORD_WEBHOOK }}
@@ -134,7 +136,9 @@ jobs:
                        "inline": false
                      }
                    ],
-                   "timestamp": "${{ github.event.head_commit.timestamp }}"
+                   "footer": {
+                     "text": "Timestamp: ${{ github.event.head_commit.timestamp }}"
+                   }
                  }]
                }' \
                ${{ secrets.DISCORD_WEBHOOK }}
