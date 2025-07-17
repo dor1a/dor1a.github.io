@@ -94,7 +94,7 @@ jobs:
                   },
                   {
                     "name": "📝 Commit Message",
-                    "value": "${{ github.event.head_commit.message }}",
+                    "value": "${{ github.event.head_commit.message }}".split("\n")[0],
                     "inline": false
                   },
                   {
@@ -127,7 +127,7 @@ jobs:
                   },
                   {
                     "name": "📝 Commit Message",
-                    "value": "${{ github.event.head_commit.message }}",
+                    "value": "${{ github.event.head_commit.message }}".split("\n")[0],
                     "inline": false
                   },
                   {
