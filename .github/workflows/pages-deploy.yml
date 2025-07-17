@@ -78,20 +78,28 @@ jobs:
         uses: tsickert/discord-webhook@v7.0.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          content: |
-            ✅ **Blog deployment succeeded!**
-            🔗 https://dor1a.github.io
-            👤 Committer: ${{ github.actor }}
-            📝 Message: ${{ github.event.head_commit.message }}
-            📄 [View Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          embed-title: "✅ Blog deployment succeeded!"
+          embed-description: |
+            [🔗 Visit site](https://dor1a.github.io)
+            👤 **Committer:** ${{ github.actor }}
+            📜 **Message:** ${{ github.event.head_commit.message }}
+          embed-url: "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          embed-color: 65280
+          embed-footer-text: "View Logs"
+          embed-footer-icon-url: "https://github.githubassets.com/favicons/favicon.png"
+          embed-timestamp: ${{ github.event.head_commit.timestamp }}
 
       - name: ❌ Deployment Failure Notification
         if: failure()
         uses: tsickert/discord-webhook@v7.0.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-          content: |
-            ❌ **Blog deployment failed!**
-            👤 Committer: ${{ github.actor }}
-            📝 Message: ${{ github.event.head_commit.message }}
-            📄 [View Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          embed-title: "❌ Blog deployment failed!"
+          embed-description: |
+            👤 **Committer:** ${{ github.actor }}
+            📜 **Message:** ${{ github.event.head_commit.message }}
+          embed-url: "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          embed-color: 16711680
+          embed-footer-text: "View Logs"
+          embed-footer-icon-url: "https://github.githubassets.com/favicons/favicon.png"
+          embed-timestamp: ${{ github.event.head_commit.timestamp }}
