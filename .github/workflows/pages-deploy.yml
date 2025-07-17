@@ -71,3 +71,70 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        
+      # Add Webhook(discord)
+      - name: ✅ Deployment Success Notification
+        if: success()
+        run: |
+          curl -H "Content-Type: application/json" \
+               -X POST \
+               -d '{
+                 "content": "**✅ Blog deployment succeeded!** 🚀",
+                 "embeds": [{
+                   "title": "🔗 Deployment Link",
+                   "description": "[dor1a.github.io](https://dor1a.github.io)",
+                   "color": 5814783,
+                   "fields": [
+                     {
+                       "name": "👤 Committer",
+                       "value": "${{ github.actor }}",
+                       "inline": true
+                     },
+                     {
+                       "name": "📝 Commit Message",
+                       "value": "${{ github.event.head_commit.message }}",
+                       "inline": false
+                     },
+                     {
+                       "name": "📄 Workflow Logs",
+                       "value": "[View Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})",
+                       "inline": false
+                     }
+                   ],
+                   "timestamp": "${{ github.event.head_commit.timestamp }}"
+                 }]
+               }' \
+               ${{ secrets.DISCORD_WEBHOOK }}
+
+      - name: ❌ Deployment Failure Notification
+        if: failure()
+        run: |
+          curl -H "Content-Type: application/json" \
+               -X POST \
+               -d '{
+                 "content": "**❌ Blog deployment failed!** ⚠️",
+                 "embeds": [{
+                   "title": "🚨 Attention Required",
+                   "description": "An error occurred during the GitHub Actions workflow. Please review the logs below.",
+                   "color": 16711680,
+                   "fields": [
+                     {
+                       "name": "👤 Committer",
+                       "value": "${{ github.actor }}",
+                       "inline": true
+                     },
+                     {
+                       "name": "📝 Commit Message",
+                       "value": "${{ github.event.head_commit.message }}",
+                       "inline": false
+                     },
+                     {
+                       "name": "📄 Workflow Logs",
+                       "value": "[View Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})",
+                       "inline": false
+                     }
+                   ],
+                   "timestamp": "${{ github.event.head_commit.timestamp }}"
+                 }]
+               }' \
+               ${{ secrets.DISCORD_WEBHOOK }}
