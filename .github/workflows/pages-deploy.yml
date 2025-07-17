@@ -75,27 +75,23 @@ jobs:
       # Add Webhook(discord)
       - name: ✅ Deployment Success Notification
         if: success()
-        uses: Ilshidur/action-discord@0.3.2
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          DISCORD_USERNAME: GitHub Actions
-          DISCORD_AVATAR: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-          DISCORD_CONTENT: |
-            ✅ Blog deployment succeeded!
+        uses: tsickert/discord-webhook@v7.0.0
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
+          content: |
+            ✅ **Blog deployment succeeded!**
             🔗 https://dor1a.github.io
             👤 Committer: ${{ github.actor }}
             📝 Message: ${{ github.event.head_commit.message }}
-            📄 Logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            📄 [View Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
 
       - name: ❌ Deployment Failure Notification
         if: failure()
-        uses: Ilshidur/action-discord@0.3.2
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          DISCORD_USERNAME: GitHub Actions
-          DISCORD_AVATAR: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-          DISCORD_CONTENT: |
-            ❌ Blog deployment failed!
+        uses: tsickert/discord-webhook@v7.0.0
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
+          content: |
+            ❌ **Blog deployment failed!**
             👤 Committer: ${{ github.actor }}
             📝 Message: ${{ github.event.head_commit.message }}
-            📄 Logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            📄 [View Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
