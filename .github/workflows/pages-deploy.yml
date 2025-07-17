@@ -83,10 +83,9 @@ jobs:
             [🔗 Visit site](https://dor1a.github.io)
             👤 **Committer:** ${{ github.actor }}
             📜 **Message:** ${{ github.event.head_commit.message }}
-          embed-url: "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            [🔍 View Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          embed-url: "https://dor1a.github.io"
           embed-color: 65280
-          embed-footer-text: "View Logs"
-          embed-footer-icon-url: "https://github.githubassets.com/favicons/favicon.png"
           embed-timestamp: ${{ github.event.head_commit.timestamp }}
 
       - name: ❌ Deployment Failure Notification
@@ -98,8 +97,7 @@ jobs:
           embed-description: |
             👤 **Committer:** ${{ github.actor }}
             📜 **Message:** ${{ github.event.head_commit.message }}
-          embed-url: "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            [🔍 View Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          embed-url: "https://dor1a.github.io"
           embed-color: 16711680
-          embed-footer-text: "View Logs"
-          embed-footer-icon-url: "https://github.githubassets.com/favicons/favicon.png"
           embed-timestamp: ${{ github.event.head_commit.timestamp }}
