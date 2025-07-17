@@ -75,70 +75,66 @@ jobs:
       # Add Webhook(discord)
       - name: ✅ Deployment Success Notification
         if: success()
-        run: |
-          curl -H "Content-Type: application/json" \
-               -X POST \
-               -d '{
-                 "content": "**✅ Blog deployment succeeded!** 🚀",
-                 "embeds": [{
-                   "title": "🔗 Deployment Link",
-                   "description": "[dor1a.github.io](https://dor1a.github.io)",
-                   "color": 5814783,
-                   "fields": [
-                     {
-                       "name": "👤 Committer",
-                       "value": "${{ github.actor }}",
-                       "inline": true
-                     },
-                     {
-                       "name": "📝 Commit Message",
-                       "value": "${{ github.event.head_commit.message }}",
-                       "inline": false
-                     },
-                     {
-                       "name": "📄 Workflow Logs",
-                       "value": "[View Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})",
-                       "inline": false
-                     }
-                   ],
-                   "footer": {
-                     "text": "Timestamp: ${{ github.event.head_commit.timestamp }}"
-                   }
-                 }]
-               }' \
-               ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@0.3.2
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          DISCORD_USERNAME: GitHub Actions
+          DISCORD_AVATAR: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+          DISCORD_EMBEDS: |
+            [
+              {
+                "title": "✅ Blog Deployment Succeeded",
+                "description": "[dor1a.github.io](https://dor1a.github.io)",
+                "color": 3066993,
+                "fields": [
+                  {
+                    "name": "👤 Committer",
+                    "value": "${{ github.actor }}",
+                    "inline": true
+                  },
+                  {
+                    "name": "📝 Commit Message",
+                    "value": "${{ github.event.head_commit.message }}",
+                    "inline": false
+                  },
+                  {
+                    "name": "📄 Workflow Logs",
+                    "value": "[View Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})",
+                    "inline": false
+                  }
+                ]
+              }
+            ]
 
       - name: ❌ Deployment Failure Notification
         if: failure()
-        run: |
-          curl -H "Content-Type: application/json" \
-               -X POST \
-               -d '{
-                 "content": "**❌ Blog deployment failed!** ⚠️",
-                 "embeds": [{
-                   "title": "🚨 Attention Required",
-                   "description": "An error occurred during the GitHub Actions workflow. Please review the logs below.",
-                   "color": 16711680,
-                   "fields": [
-                     {
-                       "name": "👤 Committer",
-                       "value": "${{ github.actor }}",
-                       "inline": true
-                     },
-                     {
-                       "name": "📝 Commit Message",
-                       "value": "${{ github.event.head_commit.message }}",
-                       "inline": false
-                     },
-                     {
-                       "name": "📄 Workflow Logs",
-                       "value": "[View Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})",
-                       "inline": false
-                     }
-                   ],
-                   "footer": {
-                     "text": "Timestamp: ${{ github.event.head_commit.timestamp }}"
-                   }
-                 }]
-               }' \
-               ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@0.3.2
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          DISCORD_USERNAME: GitHub Actions
+          DISCORD_AVATAR: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+          DISCORD_EMBEDS: |
+            [
+              {
+                "title": "❌ Blog Deployment Failed",
+                "description": "Deployment failed. Please check the logs.",
+                "color": 15158332,
+                "fields": [
+                  {
+                    "name": "👤 Committer",
+                    "value": "${{ github.actor }}",
+                    "inline": true
+                  },
+                  {
+                    "name": "📝 Commit Message",
+                    "value": "${{ github.event.head_commit.message }}",
+                    "inline": false
+                  },
+                  {
+                    "name": "📄 Workflow Logs",
+                    "value": "[View Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})",
+                    "inline": false
+                  }
+                ]
+              }
+            ]
