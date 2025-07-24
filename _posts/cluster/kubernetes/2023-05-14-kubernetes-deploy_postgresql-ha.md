@@ -1,9 +1,9 @@
 ---
-title: Kubernetes - postgresql-ha 배포해 보기
+title: Kubernetes - postgresql-ha 배포해보기
 date: 2023-05-14 18:01:00 +0900
 categories: [Cluster, Kubernetes]
 tags: [cluster, kubernetes, postgres]
-description: Kubernetes에서 Postgres DB를 HA 구성 해주는 postgresql-ha를 배포해 보았다.
+description: Kubernetes에서 Postgres DB를 HA 구성 해주는 postgresql-ha를 배포해보았다.
 ---
 
 >Kubernetes v1.24.7 / Helm 3.9.0 / postgresql-ha(bitnami) 11.1.5 / Ubuntu 22.04 LTS

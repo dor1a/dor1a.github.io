@@ -1,9 +1,9 @@
 ---
-title: Kubernetes - pgadmin4 배포해 보기
+title: Kubernetes - pgadmin4 배포해보기
 date: 2023-05-15 16:12:00 +0900
 categories: [Cluster, Kubernetes]
 tags: [cluster, kubernetes, pgadmin4]
-description: Kubernetes에서 Postgres DB를 GUI로 관리할 수 있는 pgadmin4를 배포해 보았다.
+description: Kubernetes에서 Postgres DB를 GUI로 관리할 수 있는 pgadmin4를 배포해보았다.
 ---
 
 >Kubernetes v1.24.7 / pgadmin4 v6 / Ubuntu 22.04 LTS

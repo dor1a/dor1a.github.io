@@ -1,9 +1,9 @@
 ---
-title: Kubernetes - postgres-operator 배포해 보기
+title: Kubernetes - postgres-operator 배포해보기
 date: 2023-05-07 21:55:00 +0900
 categories: [Cluster, Kubernetes]
 tags: [cluster, kubernetes, postgres]
-description: Kubernetes에서 Postgres DB를 HA 구성 해주는 postgres-operator를 배포해 보았다.
+description: Kubernetes에서 Postgres DB를 HA 구성 해주는 postgres-operator를 배포해보았다.
 ---
 
 >Kubernetes v1.24.7 / postgres-operator(Crunchy Data) v5.3.0 / Ubuntu 22.04 LTS

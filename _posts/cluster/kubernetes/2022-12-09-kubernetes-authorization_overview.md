@@ -3,7 +3,7 @@ title: Kubernetes - Authorization Overview
 date: 2022-12-14 15:48:00 +0900
 categories: [Cluster, Kubernetes]
 tags: [cluster, kubernetes, cephfs, csi]
-description: Kubernetes에서 CephFS의 CSI를 사용해서 StorageClass를 사용해 보았다.
+description: Kubernetes에서 CephFS의 CSI를 사용해서 StorageClass를 사용해보았다.
 ---
 
 >Kubernetes v1.21.5

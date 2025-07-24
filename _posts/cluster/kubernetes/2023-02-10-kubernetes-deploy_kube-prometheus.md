@@ -1,9 +1,9 @@
 ---
-title: Kubernetes - kube-prometheus 배포해 보기
+title: Kubernetes - kube-prometheus 배포해보기
 date: 2023-02-10 11:56:00 +0900
 categories: [Cluster, Kubernetes]
 tags: [cluster, kubernetes, kube-prometheus, monitoring]
-description: Kubernetes를 monitoring하는 kube-prometheus를 배포해 보았다.
+description: Kubernetes를 monitoring하는 kube-prometheus를 배포해보았다.
 ---
 
 >Kubernetes v1.24.7 / kube-prometheus v0.12.0 / Ubuntu 22.04 LTS

@@ -1,9 +1,9 @@
 ---
-title: Kubernetes - awx-operator 배포해 보기
+title: Kubernetes - awx-operator 배포해보기
 date: 2023-02-16 10:01:00 +0900
 categories: [Cluster, Kubernetes]
 tags: [cluster, kubernetes, awx-operator]
-description: Kubernetes에서 Ansible을 GUI로 관리하는 aws-operator를 배포해 보았다.
+description: Kubernetes에서 Ansible을 GUI로 관리하는 aws-operator를 배포해보았다.
 ---
 
 >Kubernetes v1.24.7 / awx-operator v1.2.0 / Ubuntu 22.04 LTS

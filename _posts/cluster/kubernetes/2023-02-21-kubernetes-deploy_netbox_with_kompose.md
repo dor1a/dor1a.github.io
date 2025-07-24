@@ -1,9 +1,9 @@
 ---
-title: Kubernetes - NetBox를 kompose로 배포해 보기
+title: Kubernetes - NetBox를 kompose로 배포해보기
 date: 2023-02-21 10:44:00 +0900
 categories: [Cluster, Kubernetes]
 tags: [cluster, kubernetes, netbox, kompose]
-description: Kubernetes에서 IPAM(IP Address Management)와 DCIM(DataCenter Infrastructure Management) 등 자산관리를 하는 오픈소스 솔루션인 NetBox를 배포해 보았다.
+description: Kubernetes에서 IPAM(IP Address Management)와 DCIM(DataCenter Infrastructure Management) 등 자산관리를 하는 오픈소스 솔루션인 NetBox를 배포해보았다.
 ---
 
 >Kubernetes v1.24.7 / NetBox v3.4.4 / kompose v1.28.0 / Ubuntu 22.04 LTS

@@ -1,9 +1,9 @@
 ---
-title: Kubernetes - rook-ceph 배포해 보기
+title: Kubernetes - rook-ceph 배포해보기
 date: 2023-02-02 10:21:00 +0900
 categories: [Cluster, Kubernetes]
 tags: [cluster, kubernetes, rook-ceph]
-description: Kubernetes에서 PV(Persistence Volume)으로 사용 할 수 있는 rook-ceph을 배포해 보았다.
+description: Kubernetes에서 PV(Persistence Volume)으로 사용 할 수 있는 rook-ceph을 배포해보았다.
 ---
 
 >Kubernetes v1.24.7 / Rook v1.10.10 / Ubuntu 22.04 LTS
