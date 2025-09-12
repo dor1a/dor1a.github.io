@@ -31,7 +31,7 @@ _Proxmox VE Administration Guide 내의 Architecture_
 
 아주 간단하게 정리하자면 시장에서 많이 쓰이면서 많은 사람들이 알고있는 가상화 솔루션(VMware, Proxmox, Linux KVM 등)은 전가상화이다.
 
-## 반가상화(Full Virtualization)
+## 반가상화(Para-Virtualization)
 ---
 
 ![Xen Project Software Overview 내의 Architecture](/assets/img/post/virtualization/2025-09-12-virtualization-compare_fullvirtual_and_paravirtual/2.png)
@@ -53,7 +53,7 @@ _Xen Project Software Overview 내의 Architecture_
 반가상화에서 필수로 알아야하는 모듈은 **VirtIO**이다.  
 
 >VirtIO란?
-* 가상 환경에서 I/O device를 위한 반가상화(para-virtualized) 표준 인터페이스이다.
+* 가상 환경에서 I/O device를 위한 반가상화 된(para-virtualized) 표준 인터페이스이다.
 * QEMU/KVM, Xen 같은 Hypervisor에서 Guest OS와 Host 간의 I/O 통신을 단순화 및 표준화 하기 위해 만들어졌다.
 * PCI, MMIO 같은 실제 hardware bus 대신 Virtqueue(A ring buffer data structure)로 Guest와 Host 간에 데이터를 주고받음.
 
