@@ -40,8 +40,10 @@ _Xen Project Software Overview 내의 Architecture_
 반가상화란 다음과 같은 정의를 내포하고 있다.
 
 1. Guest OS가 자기 자신이 가상 환경인지를 알고 있다.
-2. Guest OS의 Kernel을 수정하여 Hypervisor와 직접적으로 통신을 한다.(ex. Xen PV, VirtIO 등)
-3. Kernel에 대한 직접적인 수정이 이뤄지기에 호환성은 전가상화보다 안좋다.(ex. Driver mismatch, 정해진 IO driver 사용 등)
+2. Guest OS의 Kernel을 수정하여 Hypervisor와 직접적으로 통신을 한다.  
+   (ex. Xen PV, VirtIO 등)
+3. Kernel에 대한 직접적인 수정이 이뤄지기에 호환성은 전가상화보다 안좋다.  
+   (ex. Driver mismatch, 정해진 IO driver 사용 등)
 4. Hypervisor와 바로 통신을 하기에 overhead가 적고 성능이 매우 좋다.
 
 정리하자면 전가상화 대비 반가상화는 호환성이 좋진 않지만 추가 설정(Kernel 수정 및 driver 적용)을 해주면 성능 극대화가 가능하다.
@@ -53,18 +55,18 @@ _Xen Project Software Overview 내의 Architecture_
 >VirtIO란?
 * 가상 환경에서 I/O device를 위한 반가상화(para-virtualized) 표준 인터페이스이다.
 * QEMU/KVM, Xen 같은 Hypervisor에서 Guest OS와 Host 간의 I/O 통신을 단순화 및 표준화 하기 위해 만들어졌다.
-* PCI, MMIO 같은 실제 hardware bus 대신, Virtqueue(A ring buffer data structure)로 Guest와 Host 간에 데이터를 주고받음.
+* PCI, MMIO 같은 실제 hardware bus 대신 Virtqueue(A ring buffer data structure)로 Guest와 Host 간에 데이터를 주고받음.
 
 구조는 다음과 같다.
 
-1. Front-end (Guest OS)
-   VirtIO driver
+1. Front-end (Guest OS)  
+   VirtIO driver  
    Guest OS의 kernel module 형태로 동작하며 application은 그냥 일반 device와 같이 사용한다.
-2. Back-end (Host, QEMU/KVM)
-   QEMU의 VirtIO device emulation code
+2. Back-end (Host, QEMU/KVM)  
+   QEMU의 VirtIO device emulation code  
    Guest에서 보낸 요청을 실제 physical hardware device나 network stack으로 연결한다.
-3. Transport Layer
-   주로 PCI device 형태로 노출 됨(Guest에서는 PCI device로 인식 그리고 driver 세팅)
+3. Transport Layer  
+   주로 PCI device 형태로 노출 됨(Guest에서는 PCI device로 인식 그리고 driver 세팅)  
    MMIO(Memory-Mapped I/O), Channel I/O 같은 다른 전송 방식도 있음.
 
 주요 VirtIO device는 다음과 같다.
