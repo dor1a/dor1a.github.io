@@ -10,7 +10,7 @@ description: 전가상화(Full Virtualization)와 반가상화(Para-Virtualizati
 ---
 
 * 전가상화(Full Virtualization)와 반가상화(Para-Virtualization)는 가상화를 구성하다보면 자주 사용하는 용어이다.
-* 간단하게는 Guest OS가 자기가 가상환경인지 아는지 모르는지의 차이다.
+* 간단하게는 Guest OS가 자기가 가상 환경인지 아는지 모르는지의 차이다.
 * 그리고 전반적으로 안정성 또는 신뢰성에 연관 되어있기에 엔지니어는 알아야하는 정의다.
 * 핵심적으로 아주 간단하게는 다음과 같이 정리가 된다.
   - 전가상화: 호환성↑ / 성능↓
@@ -19,8 +19,8 @@ description: 전가상화(Full Virtualization)와 반가상화(Para-Virtualizati
 ## 전가상화(Full Virtualization)
 ---
 
-![Proxmox VE Administration Guide 내의 아키텍처](/assets/img/post/virtualization/2025-09-12-virtualization-compare_fullvirtual_and_paravirtual/1.svg)
-_Proxmox VE Administration Guide 내의 아키텍처_
+![Proxmox VE Administration Guide 내의 Architecture](/assets/img/post/virtualization/2025-09-12-virtualization-compare_fullvirtual_and_paravirtual/1.svg)
+_Proxmox VE Administration Guide 내의 Architecture_
 
 전가상화란 다음과 같은 정의를 내포하고 있다.
 
