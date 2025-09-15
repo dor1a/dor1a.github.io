@@ -18,7 +18,7 @@ description: Proxmox VM에 qemu-guest-agent를 설치해서 Hypervisor에서 정
 ## 개요
 ---
 
-* Proxmox는 Linux KVM(Kernel-based Virtual Machine)과 QEMU(Quick Emulator)를 기반으로 한 Hypervisor 이다.
+* Proxmox는 **Linux KVM(Kernel-based Virtual Machine)**과 **QEMU(Quick Emulator)**를 기반으로 한 Hypervisor 이다.
 * Proxmox에서 `qemu-guest-agent`를 VM에 설치하게 된다면 VM의 정보와 CPU, MEM, Network 등의 정보를 Host에 전달한다.
 * Hypervisor에서는 guest VM에게 시스템 종료 등을 명령어나 GUI로 손 쉽게 제어 할 수 있다.
 * Snapshot 또는 Backup 시 Guest File system을 일시정지 할 수 있다.
@@ -32,7 +32,7 @@ description: Proxmox VM에 qemu-guest-agent를 설치해서 Hypervisor에서 정
 ---
 Promxox에서는 기본적으로 QEMU Agent는 반가상화로 사용하게 된다.  
 그러기에 `KVM hardware virtualization`은 필수로 활성화 한다.  
-`KVM hardware virtualization` 옵션은 CPU의 type을 **hosts**로 사용 시에도 기본적으로 사용한다.
+`KVM hardware virtualization` 옵션은 CPU의 type을 **host**로 사용 시에도 기본적으로 사용한다.
 
 ![Virtual Machine 내 Options 메뉴](/assets/img/post/virtualization/2025-09-15-proxmox-setup_qemu-guest-agent/1.png)
 _Virtual Machine 내 Options 메뉴_
