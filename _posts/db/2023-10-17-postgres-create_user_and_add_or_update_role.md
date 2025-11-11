@@ -25,14 +25,15 @@ description: Postgres에서 처음 구성 시 user 생성과 권한 추가 및 �
 ---
 
 우선 container내의 `psql`을 통하여 DB에 접근한다.  
-접근 후 기존 user를 확인 후 필요 시 생성한다.
+접근 후 기존 user를 확인 후 필요 시 생성한다.  
+user 생성 시 login을 하려면 DB도 꼭 생성 해야한다.
 
 ```shell
 dor1@hq-is-lxc-rdb:~$ docker exec -it postgres psql -U postgres
 psql (16.0 (Debian 16.0-1.pgdg120+1))
 Type "help" for help.
 
-postgres=# \
+postgres=# 
 
 # 기존 user 확인
 postgres=# \du
@@ -45,14 +46,6 @@ postgres=# \du
 postgres=# CREATE USER deepadmin WITH PASSWORD 'qwer4321!';
 CREATE ROLE
 
-# user 확인
-postgres=# \du
-                             List of roles
- Role name |                         Attributes
------------+------------------------------------------------------------
- deepadmin |
- postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS
-
 # role 추가(변경 또한 가능)
 postgres=# ALTER ROLE deepadmin SUPERUSER CREATEROLE CREATEDB REPLICATION BYPASSRLS;
 ALTER ROLE
@@ -64,4 +57,21 @@ postgres=# \du
 -----------+------------------------------------------------------------
  deepadmin | Superuser, Create role, Create DB, Replication, Bypass RLS
  postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS
+
+# user DB 생성
+postgres=# CREATE DATABASE deepadmin;
+CREATE DATABASE
+
+# DB 확인
+postgres=# \l
+                                                    List of databases
+   Name    |  Owner   | Encoding | Locale Provider |  Collate   |   Ctype    | Locale | ICU Rules |   Access privileges
+-----------+----------+----------+-----------------+------------+------------+--------+-----------+-----------------------
+ deepadmin | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |        |           |
+ postgres  | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |        |           |
+ template0 | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |        |           | =c/postgres          +
+           |          |          |                 |            |            |        |           | postgres=CTc/postgres
+ template1 | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |        |           | =c/postgres          +
+           |          |          |                 |            |            |        |           | postgres=CTc/postgres
+(4 rows)
 ```
