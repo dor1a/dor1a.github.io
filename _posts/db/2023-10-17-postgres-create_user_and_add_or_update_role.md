@@ -26,7 +26,7 @@ description: Postgres에서 처음 구성 시 user 생성과 권한 추가 및 �
 
 우선 container내의 `psql`을 통하여 DB에 접근한다.  
 접근 후 기존 user를 확인 후 필요 시 생성한다.  
-user 생성 시 login을 하려면 DB도 꼭 생성 해야한다.
+user 생성 후 login을 하려면 DB도 꼭 생성 해야한다.
 
 ```shell
 dor1@hq-is-lxc-rdb:~$ docker exec -it postgres psql -U postgres
