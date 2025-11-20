@@ -68,7 +68,7 @@ mv -v /etc/pve/nodes/$OLD_HOSTNAME/qemu-server/*.conf /etc/pve/nodes/$NEW_HOSTNA
 mv -v /etc/pve/nodes/$OLD_HOSTNAME/lxc/*.conf /etc/pve/nodes/$NEW_HOSTNAME/lxc/
 ```
 
-추가로 PVE 8버전 이상부터 사용되는 `Resource Maapings` 메뉴에 대해서도 처리하기 위해서는 다음과 같이 작업해야 한다.  
+추가로 PVE 8버전 이상부터 사용되는 `Resource Mappings` 메뉴에 대해서도 처리하기 위해서는 다음과 같이 작업해야 한다.  
 `Resource Mappings`는 PCIe Passthrough와 같은 작업 전 resource에 대해 통합 관리를 위해 사용 된다.
 
 ```shell
