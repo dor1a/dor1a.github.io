@@ -1,12 +1,13 @@
 ---
 title: Proxmox - hostname 변경
 date: 2023-08-04 17:35:00 +0900
+last_modified_at: 2025-11-20 12:00:00 +0900
 categories: [Virtualization]
 tags: [virtualization, proxmox]
 description: Proxmox의 Hypervisor에서 hostname을 변경하는 방법이다.
 ---
 
->Proxmox Virtual Environment 7.4-3
+>Proxmox Virtual Environment 
 {: .prompt-info}
 
 >Hypervisor
@@ -65,6 +66,13 @@ mv -v /etc/pve/nodes/$OLD_HOSTNAME/qemu-server/*.conf /etc/pve/nodes/$NEW_HOSTNA
 
 # mv lxc configs
 mv -v /etc/pve/nodes/$OLD_HOSTNAME/lxc/*.conf /etc/pve/nodes/$NEW_HOSTNAME/lxc/
+```
+
+추가로 PVE 8버전 이상부터 사용되는 `Resource Maapings` 메뉴에 대해서도 처리하기 위해서는 다음과 같이 작업해야 한다.  
+`Resource Mappings`는 PCIe Passthrough와 같은 작업 전 resource에 대해 통합 관리를 위해 사용 된다.
+
+```shell
+sed -i.bak "s/$OLD_HOSTNAME/$NEW_HOSTNAME/gi" /etc/pve/mapping/pci.cfg
 ```
 
 ## Clean Up
