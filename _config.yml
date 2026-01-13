@@ -4,14 +4,14 @@ lang: en
 
 timezone: Asia/Seoul
 
-title: ForMellow
+title: Phomelo
 
 tagline: 404 Tagline not found
 
 description: >-
   push blog --force
 
-url: "https://blog.formellow.com"
+url: "https://blog.phomelo.com"
 
 github:
   username: dor1a
@@ -21,7 +21,7 @@ github:
 
 social:
   name: Dor1
-  email: me@formellow.com
+  email: me@phomelo.com
   links:
     #- https://twitter.com/username
     - https://github.com/dor1a
@@ -57,11 +57,11 @@ pageviews:
 
 theme_mode: dark
 
-cdn: https://pub-8aa7217da3b64b10808fc34634e806ce.r2.dev
+cdn: https://pub-b531046cfad5486cb08321a7da210855.r2.dev
 
-avatar: /assets/img/logo/formellow_logo_512x512.png
+avatar: /assets/img/logo/phomelo_logo_512x512.png
 
-social_preview_image: /assets/img/social/formellow_1200x630.png
+social_preview_image: /assets/img/social/phomelo_1200x630.png
 
 toc: true
 
